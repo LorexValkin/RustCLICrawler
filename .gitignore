@@ -1,0 +1,4 @@
+RustCLI-runs/repo-scout/.run.lock
+*.tmp
+.dashboard/
+RustCLI-runs/repo-scout/runs/*/failure.json

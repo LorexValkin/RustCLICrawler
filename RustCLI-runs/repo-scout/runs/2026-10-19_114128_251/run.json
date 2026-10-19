@@ -1,0 +1,99 @@
+{
+    "schema_version":  1,
+    "run_id":  "2026-10-19_114128_251",
+    "started_utc":  "2026-10-19T18:41:28.2496315Z",
+    "finished_utc":  "2026-10-19T18:42:20.7337079Z",
+    "engine":  "deterministic PowerShell; no AI",
+    "github_authentication":  "existing gh login; no anonymous fallback",
+    "rate_limits_at_start":  {
+                                 "core":  {
+                                              "limit":  5000,
+                                              "used":  282,
+                                              "remaining":  4718,
+                                              "reset":  1792437938
+                                          },
+                                 "search":  {
+                                                "limit":  30,
+                                                "used":  0,
+                                                "remaining":  30,
+                                                "reset":  1792435356
+                                            }
+                             },
+    "github_calls":  72,
+    "discovered":  60,
+    "shortlisted":  10,
+    "checked":  89,
+    "new_or_changed":  4,
+    "ledger_count":  89,
+    "sources":  [
+                    {
+                        "status":  "authenticated",
+                        "url":  "https://api.github.com/rate_limit",
+                        "search_limit":  30,
+                        "core_limit":  5000
+                    },
+                    {
+                        "url":  "https://api.github.com/search/repositories?q=topic%3Acoding-agent%20stars%3A%3E%3D100%20archived%3Afalse%20fork%3Afalse%20pushed%3A%3E%3D2026-09-19\u0026sort=updated\u0026order=desc\u0026per_page=8",
+                        "status":  "ok"
+                    },
+                    {
+                        "url":  "https://api.github.com/search/repositories?q=agent%20orchestration%20worktree%20stars%3A%3E%3D30%20archived%3Afalse%20fork%3Afalse%20pushed%3A%3E%3D2026-09-19\u0026sort=updated\u0026order=desc\u0026per_page=8",
+                        "status":  "ok"
+                    },
+                    {
+                        "url":  "https://api.github.com/search/repositories?q=agent%20memory%20reflection%20stars%3A%3E%3D30%20archived%3Afalse%20fork%3Afalse%20pushed%3A%3E%3D2026-09-19\u0026sort=updated\u0026order=desc\u0026per_page=8",
+                        "status":  "ok"
+                    },
+                    {
+                        "url":  "https://api.github.com/search/repositories?q=coding%20agent%20evaluation%20stars%3A%3E%3D50%20archived%3Afalse%20fork%3Afalse%20pushed%3A%3E%3D2026-09-19\u0026sort=updated\u0026order=desc\u0026per_page=8",
+                        "status":  "ok"
+                    },
+                    {
+                        "url":  "https://api.github.com/search/repositories?q=agent%20sandbox%20language%3ARust%20stars%3A%3E%3D20%20archived%3Afalse%20fork%3Afalse%20pushed%3A%3E%3D2026-09-19\u0026sort=updated\u0026order=desc\u0026per_page=8",
+                        "status":  "ok"
+                    },
+                    {
+                        "url":  "https://api.github.com/search/repositories?q=ConPTY%20language%3ARust%20archived%3Afalse%20fork%3Afalse%20pushed%3A%3E%3D2026-09-19\u0026sort=updated\u0026order=desc\u0026per_page=8",
+                        "status":  "ok"
+                    },
+                    {
+                        "url":  "https://api.github.com/search/repositories?q=agent%20encrypted%20relay%20stars%3A%3E%3D5%20archived%3Afalse%20fork%3Afalse%20pushed%3A%3E%3D2026-09-19\u0026sort=updated\u0026order=desc\u0026per_page=8",
+                        "status":  "ok"
+                    },
+                    {
+                        "items_returned":  20,
+                        "status":  "ok",
+                        "url":  "https://export.arxiv.org/api/query?search_query=all%3A%22coding+agent%22+OR+all%3A%22agentic+coding%22+OR+all%3A%22software+engineering+agent%22\u0026sortBy=submittedDate\u0026sortOrder=descending\u0026max_results=20"
+                    },
+                    {
+                        "items_returned":  1,
+                        "status":  "ok",
+                        "url":  "https://huggingface.co/api/daily_papers?limit=50"
+                    },
+                    {
+                        "items_returned":  30,
+                        "status":  "ok",
+                        "url":  "https://simonwillison.net/atom/everything/"
+                    },
+                    {
+                        "items_returned":  10,
+                        "status":  "ok",
+                        "url":  "https://www.technologyreview.com/topic/artificial-intelligence/feed/"
+                    },
+                    {
+                        "items_returned":  20,
+                        "status":  "ok",
+                        "url":  "https://hnrss.org/show?points=10"
+                    },
+                    {
+                        "items_returned":  20,
+                        "status":  "ok",
+                        "url":  "https://hnrss.org/frontpage"
+                    }
+                ],
+    "failures":  [
+
+                 ],
+    "scheduling":  "Windows Task Scheduler; daily 10:30 local time",
+    "adopted":  0
+}

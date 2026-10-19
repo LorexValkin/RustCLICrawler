@@ -1,0 +1,61 @@
+{
+    "schema_version":  1,
+    "run_id":  "2026-10-19_115957_791",
+    "started_utc":  "2026-10-19T18:59:57.7891191Z",
+    "finished_utc":  "2026-10-19T19:00:52.2716946Z",
+    "engine":  "deterministic PowerShell; no AI",
+    "github_authentication":  "existing gh login; no anonymous fallback",
+    "rate_limits_at_start":  {
+                                 "core":  {
+                                              "limit":  5000,
+                                              "used":  431,
+                                              "remaining":  4569,
+                                              "reset":  1792437938
+                                          },
+                                 "search":  {
+                                                "limit":  30,
+                                                "used":  0,
+                                                "remaining":  30,
+                                                "reset":  1792436466
+                                            }
+                             },
+    "github_calls":  83,
+    "discovered":  60,
+    "shortlisted":  10,
+    "checked":  60,
+    "new_or_changed":  19,
+    "ledger_count":  104,
+    "sources":  [
+                    {
+                        "status":  "authenticated",
+                        "url":  "https://api.github.com/rate_limit",
+                        "search_limit":  30,
+                        "core_limit":  5000
+                    },
+                    {
+                        "url":  "https://api.github.com/search/repositories?q=coding%20agent%20evaluation%20stars%3A%3E%3D50%20archived%3Afalse%20fork%3Afalse%20pushed%3A%3E%3D2026-09-19\u0026sort=updated\u0026order=desc\u0026per_page=8",
+                        "status":  "ok"
+                    },
+                    {
+                        "url":  "https://api.github.com/search/repositories?q=agent%20sandbox%20language%3ARust%20stars%3A%3E%3D20%20archived%3Afalse%20fork%3Afalse%20pushed%3A%3E%3D2026-09-19\u0026sort=updated\u0026order=desc\u0026per_page=8",
+                        "status":  "ok"
+                    },
+                    {
+                        "url":  "https://api.github.com/search/repositories?q=ConPTY%20language%3ARust%20archived%3Afalse%20fork%3Afalse%20pushed%3A%3E%3D2026-09-19\u0026sort=updated\u0026order=desc\u0026per_page=8",
+                        "status":  "ok"
+                    },
+                    {
+                        "url":  "https://api.github.com/search/repositories?q=agent%20encrypted%20relay%20stars%3A%3E%3D5%20archived%3Afalse%20fork%3Afalse%20pushed%3A%3E%3D2026-09-19\u0026sort=updated\u0026order=desc\u0026per_page=8",
+                        "status":  "ok"
+                    },
+                    {
+                        "url":  "https://api.github.com/search/repositories?q=topic%3Amcp%20language%3ARust%20stars%3A%3E%3D100%20archived%3Afalse%20fork%3Afalse%20pushed%3A%3E%3D2026-09-19\u0026sort=updated\u0026order=desc\u0026per_page=8",
+                        "status":  "ok"
+                    }
+                ],
+    "failures":  [
+
+                 ],
+    "scheduling":  "Windows Task Scheduler; daily 10:30 local time",
+    "adopted":  0
+}

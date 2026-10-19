@@ -1,0 +1,52 @@
+{
+  "outputDirectory": "RustCLI-runs/repo-scout",
+  "maxMinutes": 25,
+  "maxGithubCalls": 145,
+  "maxCandidates": 60,
+  "maxDetailedRepositories": 10,
+  "maxFeedItems": 15,
+  "lookbackDays": 30,
+  "repositoryQueries": [
+    "agent skill review stars:>=20",
+    "agent token efficiency stars:>=20",
+    "multi agent coding stars:>=30",
+    "topic:coding-agent stars:>=100",
+    "agent orchestration worktree stars:>=30",
+    "agent memory reflection stars:>=30",
+    "coding agent evaluation stars:>=50",
+    "agent sandbox language:Rust stars:>=20",
+    "ConPTY language:Rust",
+    "agent encrypted relay stars:>=5",
+    "topic:mcp language:Rust stars:>=100"
+  ],
+  "seedRepositories": [
+    "openai/codex",
+    "anthropics/claude-code",
+    "UKGovernmentBEIS/inspect_ai",
+    "harbor-framework/harbor",
+    "max-sixty/worktrunk",
+    "Dicklesworthstone/destructive_command_guard",
+    "perplexityai/SPACE"
+  ],
+  "previouslyReviewed": ["google-research/harness2", "getpaseo/paseo", "NousResearch/hermes-agent"],
+  "excludedRepositoryNames": ["jcode"],
+  "feeds": [
+    {"name": "arXiv coding agents", "kind": "paper", "format": "xml", "url": "https://export.arxiv.org/api/query?search_query=all%3A%22coding+agent%22+OR+all%3A%22agentic+coding%22+OR+all%3A%22software+engineering+agent%22&sortBy=submittedDate&sortOrder=descending&max_results=20"},
+    {"name": "Hugging Face daily papers", "kind": "paper", "format": "huggingface", "url": "https://huggingface.co/api/daily_papers?limit=50"},
+    {"name": "Simon Willison", "kind": "report", "format": "xml", "url": "https://simonwillison.net/atom/everything/"},
+    {"name": "MIT Technology Review AI", "kind": "report", "format": "xml", "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed/"},
+    {"name": "Show HN", "kind": "report", "format": "xml", "url": "https://hnrss.org/show?points=10"},
+    {"name": "Hacker News", "kind": "report", "format": "xml", "url": "https://hnrss.org/frontpage"}
+  ],
+  "relevanceTerms": ["agent", "coding", "harness", "orchestrat", "memory", "evaluation", "benchmark", "sandbox", "worktree", "conpty", "tokio", "json-rpc", "mcp", "prompt injection", "inference", "reasoning", "test integrity"],
+  "areaTerms": {
+    "1": ["harness", "orchestrat", "coding-agent", "handoff", "daemon"],
+    "2": ["memory", "reflection", "learning", "skill"],
+    "3": ["evaluation", "benchmark", "judge", "scor", "test integrity"],
+    "4": ["sandbox", "permission", "safety", "guard", "injection", "secret"],
+    "5": ["worktree", "merge queue", "file lock", "conflict"],
+    "6": ["mcp", "json-rpc", "protocol", "a2a"],
+    "7": ["rust", "windows", "conpty", "tokio", "sqlite", "terminal"],
+    "8": ["relay", "pairing", "encrypted", "mobile", "remote access"]
+  }
+}

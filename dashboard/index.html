@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A local research radar for RustCLI: repositories, papers, and reporting on agentic coding.">
+  <title>Repo Scout · RustCLI research</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/review.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to research</a>
+  <aside class="sidebar">
+    <a href="/" class="brand"><span class="brand-mark">r<span>↗</span></span><span>repo scout<small>THE RUSTCLI RADAR</small></span></a>
+    <div class="nav-label">WORKSPACE</div>
+    <nav aria-label="Main navigation">
+      <button class="nav-item active" data-view="discover"><span>◫</span> Research feed <small id="nav-total">—</small></button>
+      <button class="nav-item" data-view="review"><span>⚑</span> Review for RustCLI <small id="nav-review">—</small></button>
+      <button class="nav-item" data-view="changes"><span>↗</span> New & changed <small id="nav-changes">—</small></button>
+      <button class="nav-item" data-view="runs"><span>◷</span> Run history</button>
+      <button class="nav-item" data-view="sources"><span>◉</span> Source health</button>
+      <button class="nav-item" data-view="api"><span>⌘</span> API & exports</button>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="local-indicator"><i></i> LOCAL & CPU ONLY</div>
+      <p>No AI calls. No auto-adoption.<br>Your research stays on this machine.</p>
+      <div class="schedule"><span>↻</span><div>GitHub every hour<strong>Papers & reports · daily 10:30</strong></div></div>
+    </div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><span><b>Workspace</b> / Research intelligence</span><div><span class="connection" id="connection">Connecting</span><button class="icon-button" id="refresh" aria-label="Refresh research data">↻</button></div></header>
+    <main id="main">
+      <div class="page-heading"><div><div class="eyebrow">YOUR OUTSIDE PERSPECTIVE</div><h1 id="page-title">Agentic coding radar<span>.</span></h1><p id="page-subtitle">Fresh repositories, research, and ideas worth a closer look.</p></div><button class="primary" id="bundle-download">↓ Export for RustCLI</button></div>
+      <div id="message" role="status" aria-live="polite"></div>
+      <section class="stats" aria-label="Research counts">
+        <button class="stat" data-kind=""><span class="stat-label">IN THE LEDGER <span>◫</span></span><strong id="count-total">—</strong><small>All collected records</small></button>
+        <button class="stat" data-kind="repository"><span class="stat-label">REPOSITORIES <span>⌘</span></span><strong id="count-repository">—</strong><small>Tools, harnesses & infrastructure</small></button>
+        <button class="stat" data-kind="paper"><span class="stat-label">RESEARCH PAPERS <span>▤</span></span><strong id="count-paper">—</strong><small>Abstracts & scientific claims</small></button>
+        <button class="stat" data-kind="report"><span class="stat-label">REPORTS & WRITING <span>≋</span></span><strong id="count-report">—</strong><small>Reporting & practitioner notes</small></button>
+      </section>
+      <div class="content-layout" id="research-layout">
+        <section class="feed" aria-label="Research results">
+          <div class="section-top"><h2 id="feed-title">The research feed</h2><span class="muted" id="result-count"></span></div>
+          <div class="tabs" role="group" aria-label="Item type"><button class="selected" data-kind="">All research</button><button data-kind="repository">Repositories</button><button data-kind="paper">Papers</button><button data-kind="report">Reports</button><button data-kind="exclusion">Excluded</button></div>
+          <div class="filters"><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Search titles, ideas, or projects…" aria-label="Search research"></label><select id="status-filter" aria-label="Filter by review status"><option value="">Any status</option><option value="candidate">Candidate</option><option value="reviewed">Previously reviewed</option><option value="watch">Watch</option><option value="audit">Audit</option><option value="skip">Skip</option><option value="unsafe">Unsafe / excluded</option></select><select id="sort" aria-label="Sort research"><option value="recent">Newest first</option><option value="priority">Strongest rule match</option><option value="stars">Most stars</option><option value="name">Name A–Z</option></select></div>
+          <div class="active-filter" id="active-filter" hidden></div>
+          <div id="items" aria-live="polite"><div class="empty">Loading your research ledger…</div></div>
+          <div class="pagination"><button id="previous" class="secondary">← Previous</button><span id="page-info"></span><button id="next" class="secondary">Next →</button></div>
+        </section>
+        <aside class="insights">
+          <section class="briefing"><div class="eyebrow">THE LATEST SWEEP <span>↗</span></div><div class="brief-count"><strong id="latest-changes">—</strong><span>new or changed<br>in the latest run</span></div><div class="run-status" id="latest-status">Waiting for run data</div><div class="brief-detail" id="latest-date"></div><button class="text-button" data-view="changes">Explore the changes →</button></section>
+          <section class="panel"><div class="section-top"><h2>Focus areas</h2><button id="clear-area" class="text-button" hidden>Clear</button></div><p class="panel-note">Keyword matches across the ledger.</p><div id="areas"></div></section>
+          <section class="panel"><h2>Harness watches</h2><p class="panel-note">Priority checks on every hourly sweep.</p><div id="upstreams"></div></section>
+          <section class="panel principles"><span class="principle-icon">◇</span><h2>Evidence before adoption.</h2><p>These are discovery leads, not verified recommendations. Review the source, test the idea, then decide what belongs in RustCLI.</p><span class="mini-badge">OWNER APPROVAL REQUIRED</span></section>
+        </aside>
+      </div>
+      <section id="alternate-view" hidden></section>
+      <footer><span><b>repo scout</b> / a quieter way to keep up.</span><span>Read-only API · v1 · <a href="/api/v1/openapi.json" target="_blank" rel="noopener">OpenAPI</a></span></footer>
+    </main>
+  </div>
+  <div id="drawer-backdrop" class="drawer-backdrop" hidden></div>
+  <section id="drawer" class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden><div class="drawer-top"><span class="eyebrow">SOURCE NOTEBOOK</span><button id="close-drawer" class="icon-button" aria-label="Close source details">×</button></div><div id="drawer-content"></div></section>
+  <div id="toast" role="status" hidden></div>
+</body>
+</html>
